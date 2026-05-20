@@ -84,7 +84,7 @@ If you want to compile and build this virtualization image manually from the loc
 docker build -t walksysdev/windows11-vm .
 ```
 
-> ❗ **Important Note for First-Time Boot:** During the very first launch, the script will automatically stream down the Windows 10 Lite ISO directly to your `windows_iso` volume and allocate a dynamic `50GB qcow2` disk instance inside `windows_data`. The installation wizard via noVNC can take 20-30 minutes to initialize fully depending on your host network and emulation state.
+> ❗ **Important Note for First-Time Boot:** During the very first launch, the script will automatically stream down the Windows 11 Lite ISO directly to your `windows_iso` volume and allocate a dynamic `50GB qcow2` disk instance inside `windows_data`. The installation wizard via noVNC can take 20-30 minutes to initialize fully depending on your host network and emulation state.
 
 
 
