@@ -25,7 +25,7 @@ RUN wget https://github.com/novnc/noVNC/archive/refs/heads/master.zip -O /tmp/no
     rm -rf /tmp/novnc.zip /tmp/noVNC-master
 
 # 🚀 Optimized Premium Windows 11 Lite ISO (Tiny11 / SuperLite Edition)
-ENV ISO_URL="https://archive.org/download/tiny11-2311/tiny11%202311%20x64.iso"
+ENV ISO_URL="https://archive.org/download/tiny-11-NTDEV/tiny11%2023H2%20x64.iso"
 
 # Startup script (100% English & Dynamic Hardware Scaling for Win11)
 RUN echo '#!/bin/bash\n\
