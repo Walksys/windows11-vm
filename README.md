@@ -26,14 +26,16 @@ Launch your virtual machine with custom hardware profiles directly from the comm
 Recommended for standard external VPS hosting or dedicated server setups:
 
 ```bash
-docker run -it --rm \
+docker run -d \
+  --name walksys \
+  --restart unless-stopped \
   --device /dev/kvm \
   -p 6080:6080 \
   -p 3389:3389 \
-  -v windows_data:/data \
-  -v windows_iso:/iso \
-  -e RAM=8192 \
-  -e CORES=4 \
+  -v $(pwd)/data:/data \
+  -v $(pwd)/iso:/iso \
+  -e MEM_SIZE=12G \
+  -e CPU_CORES=4 \
   -e DISK_SIZE=100G \
   walksysdev/windows11-vm
 ```
@@ -53,14 +55,16 @@ docker build -t walksysdev/windows11-vm .
 #### Step 2: Run the VM with Full Hardware Pass-through
 
 ```bash
-docker run -it --rm \
+docker run -d \
+  --name walksys \
+  --restart unless-stopped \
   --device /dev/kvm \
   -p 6080:6080 \
   -p 3389:3389 \
-  -v windows_data:/data \
-  -v windows_iso:/iso \
-  -e RAM=12288 \
-  -e CORES=4 \
+  -v $(pwd)/data:/data \
+  -v $(pwd)/iso:/iso \
+  -e MEM_SIZE=12G \
+  -e CPU_CORES=4 \
   -e DISK_SIZE=100G \
   walksysdev/windows11-vm
 ```
